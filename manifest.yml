@@ -1,0 +1,61 @@
+# wskdeploy manifest file
+
+packages:
+  ServerlessAppPython:
+    version: 1.0
+    license: Apache-2.0
+    inputs: 
+      services.cloudant.url: "{{DATABASE_URL}}"
+      services.cloudant.database: "{{DATABASE}}"
+    actions:
+      create:
+        version: 1.0
+        function: actions/create.py
+        runtime: python-jessie:3
+        web-export: true
+      delete:
+        version: 1.0
+        function: actions/delete.py
+        runtime: python-jessie:3
+        web-export: true
+      deleteAll:
+        version: 1.0
+        function: actions/deleteAll.py
+        runtime: python-jessie:3
+        web-export: true
+      read:
+        version: 1.0
+        function: actions/read.py
+        runtime: python-jessie:3
+        web-export: true
+      readAll:
+        version: 1.0
+        function: actions/readAll.py
+        runtime: python-jessie:3
+        web-export: true
+      update:
+        version: 1.0
+        function: actions/update.py
+        runtime: python-jessie:3
+        web-export: true
+    apis:
+      ServerlessAppPython:
+        ServerlessAppPython:
+          api/create:
+            create:
+              method: "POST"
+          api/delete:  
+            delete:
+              method: "DELETE"
+          api/read:
+            read:
+              method: "GET"
+          api/update:
+            update:
+              method: "PUT"
+          api/deleteAll:
+            deleteAll:
+              method: "DELETE"
+          api/readAll:
+            readAll:
+              method: "GET"
