@@ -1,31 +1,36 @@
-![Cloud Functions](https://developer.ibm.com/code/wp-content/uploads/sites/118/2017/10/IBM-CLOUD-FUNCTIONS-35.png)
+<p align="center">
+    <a href="https://cloud.ibm.com">
+        <img src="https://landscape.cncf.io/logos/ibm-cloud.svg" height="100" alt="IBM Cloud">
+    </a>
+</p>
 
-## ServerlessAppPython
-[![](https://img.shields.io/badge/IBM%20Cloud-powered-blue.svg)](https://bluemix.net)
-[![Platform](https://img.shields.io/badge/platform-python-lightgrey.svg?style=flat)](https://console.bluemix.net/docs/runtimes/python/index.html#python_runtime)
 
-### Table of Contents
-* [Summary](#summary)
-* [Featured Technologies](#featuredtechnologies)
-* [Included Components](#includedcomponents)
-* [Steps](#steps)
-* [License](#license)
+<p align="center">
+    <a href="https://cloud.ibm.com">
+    <img src="https://img.shields.io/badge/IBM%20Cloud-powered-blue.svg" alt="IBM Cloud">
+    </a>
+    <img src="https://img.shields.io/badge/platform-node-lightgrey.svg?style=flat" alt="platform">
+    <img src="https://img.shields.io/badge/license-Apache2-blue.svg?style=flat" alt="Apache 2">
+</p>
 
-## Summary
+
+# Create a serveless Python application
+
+> We have similar applications available for [Swift](https://github.com/IBM/serverless-app-swift) and [Node.js](https://github.com/IBM/serverless-app-nodejs).
 
 This repository has code to create a serverless Backend for Frontend (BFF) using Python and IBM Cloud Functions, backend by a NoSQL database. No full stack application management required. Cloud Functions supplies basic Create, Read, Update, and Delete operations in a serverless environment. These functions are mapped to an API gateway, which can be integrated into an iOS app, for example, to enable persistence of data into a Cloudant NoSQL Database.
 
 ## Included Components
 
-* [Cloudant NoSQL DB](https://console.bluemix.net/catalog/services/cloudant): A fully managed data layer designed for modern web and mobile applications that leverages a flexible JSON schema.
+* [Cloudant NoSQL DB](https://cloud.ibm.com/catalog/services/cloudant): A fully managed data layer designed for modern web and mobile applications that leverages a flexible JSON schema.
 * [API Connect](http://developer.ibm.com/apiconnect/): Create and run secure APIs and microservices.
-* [Continuous Delivery](https://console.bluemix.net/catalog/services/continuous-delivery): Enable tool integrations that support your development, deployment, and operation tasks.
+* [Continuous Delivery](https://cloud.ibm.com/catalog/services/continuous-delivery): Enable tool integrations that support your development, deployment, and operation tasks.
 * [GitLab](https://about.gitlab.com/): GitLab unifies issues, code review, CI, and CD into a single UI.
-* [AppID](https://console.bluemix.net/catalog/services/app-id): Use the IBM Bluemix App ID service to add authentication to your mobile and web apps and protect your back-end systems.
+* [AppID](https://cloud.ibm.com/catalog/services/app-id): Use the IBM Cloud App ID service to add authentication to your mobile and web apps and protect your back-end systems.
 
 ## Featured Technologies
 
-* [Serverless](https://www.ibm.com/cloud-computing/bluemix/openwhisk): An event-action platform that allows you to execute code in response to an event.
+* [Serverless](cloud.ibm.com/openwhisk): An event-action platform that allows you to execute code in response to an event.
 * [Python](https://www.python.org/): A general purpose programming language.
 
 ## Steps
@@ -37,7 +42,7 @@ This repository has code to create a serverless Backend for Frontend (BFF) using
 
 ### 1. Install developer tools
 
-- [IBM Cloud CLI](https://console.bluemix.net/docs/cli/reference/ibmcloud/download_cli.html)
+- [IBM Cloud CLI](https://cloud.ibm.com/docs/cli/reference/ibmcloud/download_cli.html)
 - Cloud Functions Plugin:
   ```bash
   ibmcloud plugin install Cloud-Functions -r IBM Cloud
@@ -52,7 +57,7 @@ The `.bluemix` directory contains all of the configuration files that the toolch
 - `deploy.json`
 - `pipeline.yml`
 
-Detailed information regarding toolchain configuration can be found in our [docs](https://console.bluemix.net/docs/services/ContinuousDelivery/toolchains_custom.html#toolchains_custom).
+Detailed information regarding toolchain configuration can be found in our [docs](https://cloud.ibm.com/docs/services/ContinuousDelivery/toolchains_custom.html#toolchains_custom).
 
 Update the toolchain (`.bluemix/toolchain.yml`) with your desired changes.
 
@@ -74,7 +79,7 @@ Your application is deployed using the IBM Continuous Delivery pipeline. Your to
 
 #### Manage Cloud Functions and API Connect Manually
 
-Download your code locally by navigate to your App dashboard from the [Apple Development Console](https://console.bluemix.net/developer/appledevelopment/apps) or [Web Apps Console](https://console.bluemix.net/developer/appservice/apps) and select **Download Code**.
+Download your code locally by navigate to your App dashboard from the [Apple Development Console](https://cloud.ibm.com/developer/appledevelopment/apps) or [Web Apps Console](https://cloud.ibm.com/developer/appservice/apps) and select **Download Code**.
 
 You have the option to perform either a [Local Deployment](#local-deployment) or an [IBM DevOps deployment](#ibm-devops-deployment).
 
@@ -99,7 +104,7 @@ Where `<url>` is the URL value from your Cloudant service credentials.
 
 Cloudant NoSQL DB provides access to a fully managed NoSQL JSON data layer that's always-on. This service is compatible with CouchDB, and accessible through a simple to use HTTP interface for mobile and web application models.
 
-You can then review the [Actions](https://console.bluemix.net/openwhisk/actions) in the IBM Cloud Console interface, along with your [Cloud Functions APIs](https://console.bluemix.net/openwhisk/apimanagement).
+You can then review the [Actions](https://cloud.ibm.com/openwhisk/actions) in the IBM Cloud Console interface, along with your [Cloud Functions APIs](https://cloud.ibm.com/openwhisk/apimanagement).
 <table>
   <thead>
       <tr>
@@ -141,6 +146,9 @@ You can then review the [Actions](https://console.bluemix.net/openwhisk/actions)
     </tr>
   </tbody>
 </table>
+
+## Next Steps
+* Explore other [sample applications](https://cloud.ibm.com/developer/appservice/starter-kits) on IBM Cloud.
 
 ## License
 
