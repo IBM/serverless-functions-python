@@ -14,7 +14,7 @@
 </p>
 
 
-# Create a serveless Python application
+# Create a serverless Python application
 
 > We have similar applications available for [Swift](https://github.com/IBM/serverless-app-swift) and [Node.js](https://github.com/IBM/serverless-app-nodejs).
 
