@@ -1,7 +1,7 @@
 # wskdeploy manifest file
 
 packages:
-  ServerlessAppPython:
+  ServerlessFunctionsPython:
     version: 1.0
     license: Apache-2.0
     inputs: 
@@ -39,8 +39,8 @@ packages:
         runtime: python-jessie:3
         web-export: true
     apis:
-      ServerlessAppPython:
-        ServerlessAppPython:
+      ServerlessFunctionsPython:
+        ServerlessFunctionsPython:
           api/create:
             create:
               method: "POST"

@@ -1,8 +1,8 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
-  "title": "Functions ServerlessAppPython",
+  "title": "Functions ServerlessFunctionsPython",
   "description": "",
-  "longDescription": "The Delivery Pipeline automates the continuous deployment of Functions ServerlessAppPython actions.",
+  "longDescription": "The Delivery Pipeline automates the continuous deployment of Functions ServerlessFunctionsPython actions.",
   "type": "object",
   "properties": {
     "api-key": {

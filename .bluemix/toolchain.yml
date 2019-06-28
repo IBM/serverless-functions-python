@@ -1,13 +1,13 @@
 version: '2'
 template:
-  name: "Functions ServerlessAppPython"
-  description: "Deploy your Cloud Functions for ServerlessAppPython app."
+  name: "Functions ServerlessFunctionsPython"
+  description: "Deploy your Cloud Functions for ServerlessFunctionsPython app."
   required:
     - repo
     - build
 
 toolchain:
-  name: ServerlessAppPython
+  name: ServerlessFunctionsPython
 
 services:
 
@@ -51,7 +51,7 @@ form:
     schema:
       $ref: deploy.json
     parameters:
-      app-name: ServerlessAppPython
+      app-name: ServerlessFunctionsPython
       dev-space: "{{space}}"
       dev-organization: "{{organization}}"
       dev-region: "{{region}}"
