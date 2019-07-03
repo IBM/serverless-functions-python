@@ -13,7 +13,6 @@
     <img src="https://img.shields.io/badge/license-Apache2-blue.svg?style=flat" alt="Apache 2">
 </p>
 
-
 # Create a serverless Python application
 
 > We have similar applications available for [Swift](https://github.com/IBM/serverless-functions-swift) and [Node.js](https://github.com/IBM/serverless-functions-nodejs).
@@ -80,7 +79,6 @@ You can then review the [Actions](https://cloud.ibm.com/openwhisk/actions) in th
   </tbody>
 </table>
 
-
 ### Deploying to IBM Cloud
 
 <p align="center">
@@ -89,33 +87,33 @@ You can then review the [Actions](https://cloud.ibm.com/openwhisk/actions) in th
     </a>
 </p>
 
-Use the button above to deploy this same application to IBM Cloud.  This option will create a deployment pipeline, complete with a hosted Git lab project and devops toolchain.  [IBM Cloud DevOps](https://www.ibm.com/cloud-computing/bluemix/devops) services provides toolchains as a set of tool integrations that support development and deployment to IBM Cloud Functions. 
+Use the button above to deploy this same application to IBM Cloud. This option will create a deployment pipeline, complete with a hosted Git lab project and DevOps toolchain. [IBM Cloud DevOps](https://www.ibm.com/cloud/devops) services provides toolchains as a set of tool integrations that support development and deployment to IBM Cloud Functions. 
 
 
 ### Deploying Manually 
 
-To deploy this application to IBM Cloud using the command line, you can leverage IBM Cloud Developer Tools.  You will need to have the credentials for a Cloudant or CouchDB service, and need to update the feilds in the `localdev-config.json` file
+To deploy this application to IBM Cloud using the command line, you can leverage IBM Cloud Developer Tools. You will need to have the credentials for a Cloudant or CouchDB service, and need to update the feilds in the `localdev-config.json` file
 
-* Install [IBM Cloud Developer Tools](https://cloud.ibm.com/docs/cli/index.html#overview) on your machine by using the following installation command: `curl -sL https://ibm.biz/idt-installer | bash`.
-
+* Install the [IBM Cloud Developer Tools](https://cloud.ibm.com/docs/cli?topic=cloud-cli-getting-started) on your machine by running the following command:
+  ```
+  curl -sL https://ibm.biz/idt-installer | bash
+  ```
 
 * Install the [Whisk Deploy CLI](https://github.com/apache/incubator-openwhisk-wskdeploy/releases).
 
+  If on a Mac or Linux, ensure the `deploy.sh` script is executable and run it:
+  ```
+  chmod +x deploy.sh
+  ./deploy.sh
+  ```
 
-If on a Mac or Linux, ensure the `deploy.sh` script is executable and run it:
+  Alternatively, you can run the `wskdeploy` command directly, you use the `--param` command line flags to provide values for the `services.cloudant.database` and `services.cloudant.url` values.
 
-```
-chmod +x deploy.sh
-./deploy.sh
-```
+  ```bash
+  /wskdeploy -m "manifest.yml" --param "services.cloudant.url" "<url>" --param "services.cloudant.database" "products"
+  ```
 
-Alternatively, you can run the `wskdeploy` command directly, you use the `--param` command line flags to provide values for the `services.cloudant.database` and `services.cloudant.url` values.
-
-```bash
-/wskdeploy -m "manifest.yml" --param "services.cloudant.url" "<url>" --param "services.cloudant.database" "products"
-```
-
-Where `<url>` is the URL value from your Cloudant service credentials.
+  Where `<url>` is the URL value from your Cloudant service credentials.
 
 ## Next Steps
 * Explore other [sample applications](https://cloud.ibm.com/developer/appservice/starter-kits) on IBM Cloud.
