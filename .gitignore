@@ -4,3 +4,4 @@ local.env
 credentials.json
 localdev-config.json
 server/localdev-config.json
+.DS_Store
